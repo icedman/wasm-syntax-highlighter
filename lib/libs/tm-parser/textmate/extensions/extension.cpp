@@ -520,7 +520,7 @@ icon_theme_from_name(const std::string path,
 
 theme_ptr theme_from_name(const std::string path,
     std::vector<struct extension_t>& extensions,
-    const std::string uiTheme,
+    std::string uiTheme,
     const char* data)
 {
     std::string theme_path = path;
@@ -573,11 +573,14 @@ theme_ptr theme_from_name(const std::string path,
         } else {
             reader.parse(data, themeItem);
         }
+        if (themeItem.isMember("name")) {
+            uiTheme = themeItem["name"].asString();
+        }
     }
 
     // std::cout << themeItem << std::endl;
 
-    themeItem["uuid"] = theme_path;
+    themeItem["uuid"] = theme_path + "::" + uiTheme;
 
     // include
     if (themeItem.isMember("include")) {

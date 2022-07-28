@@ -89,8 +89,9 @@ static std::vector<language_info_ptr> languages;
 static textstyle_t textstyle_buffer[MAX_STYLED_SPANS];
 static char text_buffer[MAX_BUFFER_LENGTH];
 
-theme_ptr current_theme() { return themes[0]; }
-theme_ptr Textmate::theme() { return themes[0]; }
+int current_theme_id = 0;
+theme_ptr current_theme() { return themes[current_theme_id]; }
+theme_ptr Textmate::theme() { return themes[current_theme_id]; }
 
 void Textmate::initialize(std::string path) {
   load_extensions(path, extensions);
@@ -135,6 +136,12 @@ rgba_t theme_color(char *scope) { return theme_color_from_scope_fg_bg(scope); }
 
 theme_info_t themeInfo;
 int themeInfoId = -1;
+
+int Textmate::set_theme(int id)
+{
+  current_theme_id = id;
+  return id;
+}
 
 theme_info_t Textmate::theme_info() {
   char _default[32] = "default";
@@ -324,7 +331,6 @@ int Textmate::load_language(std::string path) {
   }
   return 0;
 }
-
 
 int Textmate::load_theme_data(const char* data)
 {
