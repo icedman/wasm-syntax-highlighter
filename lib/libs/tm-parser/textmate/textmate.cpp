@@ -93,6 +93,9 @@ int current_theme_id = 0;
 theme_ptr current_theme() { return themes[current_theme_id]; }
 theme_ptr Textmate::theme() { return themes[current_theme_id]; }
 
+int current_language_id = 0;
+language_info_ptr Textmate::language() { return languages[current_language_id]; }
+
 void Textmate::initialize(std::string path) {
   load_extensions(path, extensions);
   // for(auto ext : extensions) {
@@ -312,6 +315,9 @@ theme_info_t Textmate::theme_info() {
 int Textmate::load_theme(std::string path) {
   theme_ptr theme = theme_from_name(path, extensions);
   if (theme != NULL) {
+    #ifdef DISABLE_RESOURCE_CACHING
+    themes.clear();
+    #endif
     themes.emplace_back(theme);
     return themes.size() - 1;
   }
@@ -326,16 +332,28 @@ int Textmate::load_icons(std::string path) {
 int Textmate::load_language(std::string path) {
   language_info_ptr lang = language_from_file(path, extensions);
   if (lang != NULL) {
+    #ifdef DISABLE_RESOURCE_CACHING
+    languages.clear();
+    #endif
     languages.emplace_back(lang);
     return languages.size() - 1;
   }
   return 0;
 }
 
+int Textmate::set_language(int id)
+{
+  current_language_id = id;
+  return id;
+}
+
 int Textmate::load_theme_data(const char* data)
 {
   theme_ptr theme = theme_from_name("", extensions, "", data);
   if (theme != NULL) {
+    #ifdef DISABLE_RESOURCE_CACHING
+    themes.clear();
+    #endif
     themes.emplace_back(theme);
     return themes.size() - 1;
   }
@@ -346,6 +364,9 @@ int Textmate::load_language_data(const char* data)
 {
   language_info_ptr lang = language_from_file("", extensions, data);
   if (lang != NULL) {
+    #ifdef DISABLE_RESOURCE_CACHING
+    languages.clear();
+    #endif
     languages.emplace_back(lang);
     return languages.size() - 1;
   }

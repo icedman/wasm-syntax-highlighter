@@ -117,6 +117,8 @@ public:
   static int load_language_data(const char* grammar);
   static int load_icons(std::string path);
   static language_info_ptr language_info(int id = 0);
+  static language_info_ptr language();
+  static int set_language(int id);
   static std::vector<textstyle_t>
   run_highlighter(char *_text, language_info_ptr lang, theme_ptr theme,
                   block_data_t *block = NULL, block_data_t *prev = NULL,

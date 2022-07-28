@@ -27,6 +27,7 @@ static bool file_exists(const char* path)
     return exists;
 }
 
+#ifndef DISABLE_PLIST_GRAMMARS
 void parseXMLElement(Json::Value& target, tinyxml2::XMLElement* element);
 void parseXMLElementArray(Json::Value& target, tinyxml2::XMLElement* element);
 
@@ -84,6 +85,7 @@ void parseXMLElement(Json::Value& target, tinyxml2::XMLElement* element)
         pChild = pChild->NextSiblingElement();
     }
 }
+#endif
 
 // std::string convertTMLanguagetoJSON(const char *path) {
 Json::Value load_plist_or_json(std::string path)
@@ -93,6 +95,7 @@ Json::Value load_plist_or_json(std::string path)
     }
     Json::Value result;
 
+    #ifndef DISABLE_PLIST_GRAMMARS
     tinyxml2::XMLDocument doc;
     doc.LoadFile(path.c_str());
     tinyxml2::XMLElement* pRoot = doc.RootElement();
@@ -100,7 +103,7 @@ Json::Value load_plist_or_json(std::string path)
         return result;
 
     parseXMLElement(result, pRoot->FirstChildElement());
-
+    #endif
     return result;
 }
 
@@ -204,8 +207,9 @@ void load_extensions(const std::string _path,
                 log(ex.package["name"].asString().c_str());
                 log("extensions path %s", ex.path.c_str());
             }
-
+            #ifndef DISABLE_RESOURCE_CACHING
             mappedExtensions.emplace(ex.id, ex);
+            #endif
             // extensions.emplace_back(ex);
         } else {
             // printf(">exclude %s\n", ex.path.c_str());
@@ -230,7 +234,7 @@ static bool load_language_configuration(const std::string path,
         return false;
     }
 
-    lang->definition = root;
+    // lang->definition = root;
 
     if (root.isMember("comments")) {
         Json::Value comments = root["comments"];
@@ -427,7 +431,9 @@ language_from_file(const std::string path,
                 // std::cout << path << std::endl;
 
                 // don't cache..? causes problem with highlighter thread
+                #ifndef DISABLE_RESOURCE_CACHING
                 cache.emplace(suffix, lang);
+                #endif
 
                 return lang;
             }
@@ -715,7 +721,9 @@ icon_t icon_for_file(icon_theme_ptr icons, std::string filename,
         if (iconDef.isMember("iconPath")) {
             res.path = icons->icons_path + "/" + iconDef["iconPath"].asString();
             res.svg = true;
+            #ifndef DISABLE_RESOURCE_CACHING
             cache.emplace(_suffix, res);
+            #endif
             return res;
         }
     }
@@ -786,7 +794,9 @@ icon_t icon_for_file(icon_theme_ptr icons, std::string filename,
             res.path = icons->icons_path + "/" + iconDef["iconPath"].asString();
             if (file_exists(res.path.c_str())) {
                 res.svg = true;
+                #ifndef DISABLE_RESOURCE_CACHING
                 cache.emplace(cacheId, res);
+                #endif
                 return res;
             }
         }

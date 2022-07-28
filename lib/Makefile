@@ -562,30 +562,6 @@ libs/jsoncpp/dist/jsoncpp.cpp.s:
 	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/jsoncpp/dist/jsoncpp.cpp.s
 .PHONY : libs/jsoncpp/dist/jsoncpp.cpp.s
 
-libs/tinyxml2/tinyxml2.o: libs/tinyxml2/tinyxml2.cpp.o
-.PHONY : libs/tinyxml2/tinyxml2.o
-
-# target to build an object file
-libs/tinyxml2/tinyxml2.cpp.o:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tinyxml2/tinyxml2.cpp.o
-.PHONY : libs/tinyxml2/tinyxml2.cpp.o
-
-libs/tinyxml2/tinyxml2.i: libs/tinyxml2/tinyxml2.cpp.i
-.PHONY : libs/tinyxml2/tinyxml2.i
-
-# target to preprocess a source file
-libs/tinyxml2/tinyxml2.cpp.i:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tinyxml2/tinyxml2.cpp.i
-.PHONY : libs/tinyxml2/tinyxml2.cpp.i
-
-libs/tinyxml2/tinyxml2.s: libs/tinyxml2/tinyxml2.cpp.s
-.PHONY : libs/tinyxml2/tinyxml2.s
-
-# target to generate assembly for a file
-libs/tinyxml2/tinyxml2.cpp.s:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tinyxml2/tinyxml2.cpp.s
-.PHONY : libs/tinyxml2/tinyxml2.cpp.s
-
 libs/tm-parser/textmate/extensions/extension.o: libs/tm-parser/textmate/extensions/extension.cpp.o
 .PHONY : libs/tm-parser/textmate/extensions/extension.o
 
@@ -1033,9 +1009,6 @@ help:
 	@echo "... libs/jsoncpp/dist/jsoncpp.o"
 	@echo "... libs/jsoncpp/dist/jsoncpp.i"
 	@echo "... libs/jsoncpp/dist/jsoncpp.s"
-	@echo "... libs/tinyxml2/tinyxml2.o"
-	@echo "... libs/tinyxml2/tinyxml2.i"
-	@echo "... libs/tinyxml2/tinyxml2.s"
 	@echo "... libs/tm-parser/textmate/extensions/extension.o"
 	@echo "... libs/tm-parser/textmate/extensions/extension.i"
 	@echo "... libs/tm-parser/textmate/extensions/extension.s"

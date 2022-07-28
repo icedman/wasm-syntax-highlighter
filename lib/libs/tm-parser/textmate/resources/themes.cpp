@@ -1,5 +1,8 @@
 #include "themes.h"
 
+#if 1
+const char* THEME_MONOKAI = "{}";
+#else
 const char* THEME_MONOKAI = "{\"type\":\"dark\",\"colors\":{\"dropdown.background\":\"#414339\",\"list."
                            "activeSelectionBackground\":\"#75715E\",\"quickInputList."
                            "focusBackground\":\"#414339\",\"dropdown.listBackground\":\"#1e1f1c\","
@@ -161,3 +164,5 @@ const char* THEME_MONOKAI = "{\"type\":\"dark\",\"colors\":{\"dropdown.backgroun
                            "\"scope\":\"token.debug-token\",\"settings\":{\"foreground\":\"#b267e6\"}}"
                            ",{\"name\":\"this.self\",\"scope\":\"variable.language\",\"settings\":{"
                            "\"foreground\":\"#FD971F\"}}],\"semanticHighlighting\":true}";
+
+    #endif

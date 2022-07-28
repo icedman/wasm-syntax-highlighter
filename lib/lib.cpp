@@ -10,6 +10,7 @@
 #include <themes.h>
 
 #define SKIP_PARSE_THRESHOLD 500
+#define MAX_BUFFER_LENGTH (1024*512)
 
 #define EXPORT                                                                 \
   extern "C" __attribute__((visibility("default"))) __attribute__((used))
@@ -17,10 +18,11 @@
 EXPORT void initialize()
 {
 	Textmate::load_theme_data(THEME_MONOKAI);
-	Textmate::load_language_data(GRAMMAR_CPP);
+	Textmate::load_language_data(NULL);
 }
 
-std::string string_buffer;
+static char string_buffer[MAX_BUFFER_LENGTH];
+int string_buffer_idx = 0;
 std::vector<textstyle_t> text_styles;
 
 EXPORT int highlight(const char *code, bool start)
@@ -37,7 +39,7 @@ EXPORT int highlight(const char *code, bool start)
 		text_styles.push_back(style);
 		return text_styles.size();
 	}
-	text_styles = Textmate::run_highlighter((char*)code, Textmate::language_info(0), Textmate::theme(),
+	text_styles = Textmate::run_highlighter((char*)code, Textmate::language(), Textmate::theme(),
 			NULL,
 			start ? NULL : Textmate::previous_block_data()
 			);
@@ -46,20 +48,32 @@ EXPORT int highlight(const char *code, bool start)
 
 EXPORT int highlight_buffer(bool start)
 {
-	printf("%s\n", string_buffer.c_str());
-	return highlight(string_buffer.c_str(), start);
+	// printf("%s\n", string_buffer.c_str());
+	return highlight(string_buffer, start);
 }
 
 EXPORT int load_theme_buffer()
 {
-	int id = Textmate::load_theme_data(string_buffer.c_str());
+	int id = Textmate::load_theme_data(string_buffer);
 	Textmate::set_theme(id);
 	return id;
 }
 
 EXPORT int load_language_buffer()
 {
-	return 0;
+	int id = Textmate::load_language_data(string_buffer);
+	Textmate::set_language(id);
+	return id;
+}
+
+EXPORT void set_theme(int id)
+{
+	Textmate::set_theme(id);
+}
+
+EXPORT void set_language(int id)
+{
+	Textmate::set_language(id);
 }
 
 EXPORT int get_style_span(int index)
@@ -75,7 +89,7 @@ EXPORT int get_style_span(int index)
 	// start
 	res |= (s.start);
 	// length
-	res |= (s.length << 16);
+	res |= (s.length << 8);
 
 	// printf("%d-%d rgb(%d, %d, %d) %d\n", s.start, s.length, s.r, s.g, s.b, res);
 	return res;
@@ -99,6 +113,7 @@ EXPORT int get_style_color(int index)
 	res |= (s.r);
 	res |= (s.g << 8);
 	res |= (s.b << 16);
+	res |= ((s.italic ? 1 : 0) << 24);
 
 	// printf("%d-%d rgb(%d, %d, %d)\n", s.start, s.length, s.r, s.g, s.b);
 	return res;
@@ -145,11 +160,16 @@ EXPORT int get_theme_background()
 
 EXPORT void begin_string()
 {
-	string_buffer = "";
+	string_buffer_idx = 0;
 }
 
 EXPORT void push_character(int c)
 {
-	string_buffer += static_cast<char>(c);
-	// printf(">%s %d\n", string_buffer.c_str(), c);
+	if (string_buffer_idx >= MAX_BUFFER_LENGTH) {
+		printf("buffer overflow %d\n", string_buffer_idx);
+		string_buffer_idx = 0;
+		return;
+	}
+	string_buffer[string_buffer_idx++] = c;
+	string_buffer[string_buffer_idx] = 0;
 }
