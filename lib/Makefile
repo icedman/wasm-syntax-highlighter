@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/iceman/Developer/Projects/emscripten
+CMAKE_SOURCE_DIR = /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/iceman/Developer/Projects/emscripten
+CMAKE_BINARY_DIR = /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/iceman/Developer/Projects/emscripten && $(CMAKE_COMMAND) -E cmake_progress_start /home/iceman/Developer/Projects/emscripten/CMakeFiles /home/iceman/Developer/Projects/emscripten/lib//CMakeFiles/progress.marks
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/iceman/Developer/Projects/emscripten/CMakeFiles 0
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(CMAKE_COMMAND) -E cmake_progress_start /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter/CMakeFiles /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter/lib//CMakeFiles/progress.marks
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/clean
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/preinstall
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/preinstall
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/iceman/Developer/Projects/emscripten && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 lib/CMakeFiles/cpp_lib.dir/rule:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/cpp_lib.dir/rule
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/cpp_lib.dir/rule
 .PHONY : lib/CMakeFiles/cpp_lib.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ cpp_lib: lib/CMakeFiles/cpp_lib.dir/rule
 
 # fast build rule for target.
 cpp_lib/fast:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/build
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/build
 .PHONY : cpp_lib/fast
 
 lib.o: lib.cpp.o
@@ -135,7 +135,7 @@ lib.o: lib.cpp.o
 
 # target to build an object file
 lib.cpp.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/lib.cpp.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/lib.cpp.o
 .PHONY : lib.cpp.o
 
 lib.i: lib.cpp.i
@@ -143,7 +143,7 @@ lib.i: lib.cpp.i
 
 # target to preprocess a source file
 lib.cpp.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/lib.cpp.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/lib.cpp.i
 .PHONY : lib.cpp.i
 
 lib.s: lib.cpp.s
@@ -151,7 +151,7 @@ lib.s: lib.cpp.s
 
 # target to generate assembly for a file
 lib.cpp.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/lib.cpp.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/lib.cpp.s
 .PHONY : lib.cpp.s
 
 libs/Onigmo/enc/ascii.o: libs/Onigmo/enc/ascii.c.o
@@ -159,7 +159,7 @@ libs/Onigmo/enc/ascii.o: libs/Onigmo/enc/ascii.c.o
 
 # target to build an object file
 libs/Onigmo/enc/ascii.c.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/enc/ascii.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/enc/ascii.c.o
 .PHONY : libs/Onigmo/enc/ascii.c.o
 
 libs/Onigmo/enc/ascii.i: libs/Onigmo/enc/ascii.c.i
@@ -167,7 +167,7 @@ libs/Onigmo/enc/ascii.i: libs/Onigmo/enc/ascii.c.i
 
 # target to preprocess a source file
 libs/Onigmo/enc/ascii.c.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/enc/ascii.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/enc/ascii.c.i
 .PHONY : libs/Onigmo/enc/ascii.c.i
 
 libs/Onigmo/enc/ascii.s: libs/Onigmo/enc/ascii.c.s
@@ -175,7 +175,7 @@ libs/Onigmo/enc/ascii.s: libs/Onigmo/enc/ascii.c.s
 
 # target to generate assembly for a file
 libs/Onigmo/enc/ascii.c.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/enc/ascii.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/enc/ascii.c.s
 .PHONY : libs/Onigmo/enc/ascii.c.s
 
 libs/Onigmo/enc/unicode.o: libs/Onigmo/enc/unicode.c.o
@@ -183,7 +183,7 @@ libs/Onigmo/enc/unicode.o: libs/Onigmo/enc/unicode.c.o
 
 # target to build an object file
 libs/Onigmo/enc/unicode.c.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/enc/unicode.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/enc/unicode.c.o
 .PHONY : libs/Onigmo/enc/unicode.c.o
 
 libs/Onigmo/enc/unicode.i: libs/Onigmo/enc/unicode.c.i
@@ -191,7 +191,7 @@ libs/Onigmo/enc/unicode.i: libs/Onigmo/enc/unicode.c.i
 
 # target to preprocess a source file
 libs/Onigmo/enc/unicode.c.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/enc/unicode.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/enc/unicode.c.i
 .PHONY : libs/Onigmo/enc/unicode.c.i
 
 libs/Onigmo/enc/unicode.s: libs/Onigmo/enc/unicode.c.s
@@ -199,7 +199,7 @@ libs/Onigmo/enc/unicode.s: libs/Onigmo/enc/unicode.c.s
 
 # target to generate assembly for a file
 libs/Onigmo/enc/unicode.c.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/enc/unicode.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/enc/unicode.c.s
 .PHONY : libs/Onigmo/enc/unicode.c.s
 
 libs/Onigmo/enc/utf_8.o: libs/Onigmo/enc/utf_8.c.o
@@ -207,7 +207,7 @@ libs/Onigmo/enc/utf_8.o: libs/Onigmo/enc/utf_8.c.o
 
 # target to build an object file
 libs/Onigmo/enc/utf_8.c.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/enc/utf_8.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/enc/utf_8.c.o
 .PHONY : libs/Onigmo/enc/utf_8.c.o
 
 libs/Onigmo/enc/utf_8.i: libs/Onigmo/enc/utf_8.c.i
@@ -215,7 +215,7 @@ libs/Onigmo/enc/utf_8.i: libs/Onigmo/enc/utf_8.c.i
 
 # target to preprocess a source file
 libs/Onigmo/enc/utf_8.c.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/enc/utf_8.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/enc/utf_8.c.i
 .PHONY : libs/Onigmo/enc/utf_8.c.i
 
 libs/Onigmo/enc/utf_8.s: libs/Onigmo/enc/utf_8.c.s
@@ -223,7 +223,7 @@ libs/Onigmo/enc/utf_8.s: libs/Onigmo/enc/utf_8.c.s
 
 # target to generate assembly for a file
 libs/Onigmo/enc/utf_8.c.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/enc/utf_8.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/enc/utf_8.c.s
 .PHONY : libs/Onigmo/enc/utf_8.c.s
 
 libs/Onigmo/regcomp.o: libs/Onigmo/regcomp.c.o
@@ -231,7 +231,7 @@ libs/Onigmo/regcomp.o: libs/Onigmo/regcomp.c.o
 
 # target to build an object file
 libs/Onigmo/regcomp.c.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regcomp.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regcomp.c.o
 .PHONY : libs/Onigmo/regcomp.c.o
 
 libs/Onigmo/regcomp.i: libs/Onigmo/regcomp.c.i
@@ -239,7 +239,7 @@ libs/Onigmo/regcomp.i: libs/Onigmo/regcomp.c.i
 
 # target to preprocess a source file
 libs/Onigmo/regcomp.c.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regcomp.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regcomp.c.i
 .PHONY : libs/Onigmo/regcomp.c.i
 
 libs/Onigmo/regcomp.s: libs/Onigmo/regcomp.c.s
@@ -247,7 +247,7 @@ libs/Onigmo/regcomp.s: libs/Onigmo/regcomp.c.s
 
 # target to generate assembly for a file
 libs/Onigmo/regcomp.c.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regcomp.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regcomp.c.s
 .PHONY : libs/Onigmo/regcomp.c.s
 
 libs/Onigmo/regenc.o: libs/Onigmo/regenc.c.o
@@ -255,7 +255,7 @@ libs/Onigmo/regenc.o: libs/Onigmo/regenc.c.o
 
 # target to build an object file
 libs/Onigmo/regenc.c.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regenc.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regenc.c.o
 .PHONY : libs/Onigmo/regenc.c.o
 
 libs/Onigmo/regenc.i: libs/Onigmo/regenc.c.i
@@ -263,7 +263,7 @@ libs/Onigmo/regenc.i: libs/Onigmo/regenc.c.i
 
 # target to preprocess a source file
 libs/Onigmo/regenc.c.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regenc.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regenc.c.i
 .PHONY : libs/Onigmo/regenc.c.i
 
 libs/Onigmo/regenc.s: libs/Onigmo/regenc.c.s
@@ -271,7 +271,7 @@ libs/Onigmo/regenc.s: libs/Onigmo/regenc.c.s
 
 # target to generate assembly for a file
 libs/Onigmo/regenc.c.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regenc.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regenc.c.s
 .PHONY : libs/Onigmo/regenc.c.s
 
 libs/Onigmo/regerror.o: libs/Onigmo/regerror.c.o
@@ -279,7 +279,7 @@ libs/Onigmo/regerror.o: libs/Onigmo/regerror.c.o
 
 # target to build an object file
 libs/Onigmo/regerror.c.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regerror.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regerror.c.o
 .PHONY : libs/Onigmo/regerror.c.o
 
 libs/Onigmo/regerror.i: libs/Onigmo/regerror.c.i
@@ -287,7 +287,7 @@ libs/Onigmo/regerror.i: libs/Onigmo/regerror.c.i
 
 # target to preprocess a source file
 libs/Onigmo/regerror.c.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regerror.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regerror.c.i
 .PHONY : libs/Onigmo/regerror.c.i
 
 libs/Onigmo/regerror.s: libs/Onigmo/regerror.c.s
@@ -295,7 +295,7 @@ libs/Onigmo/regerror.s: libs/Onigmo/regerror.c.s
 
 # target to generate assembly for a file
 libs/Onigmo/regerror.c.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regerror.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regerror.c.s
 .PHONY : libs/Onigmo/regerror.c.s
 
 libs/Onigmo/regexec.o: libs/Onigmo/regexec.c.o
@@ -303,7 +303,7 @@ libs/Onigmo/regexec.o: libs/Onigmo/regexec.c.o
 
 # target to build an object file
 libs/Onigmo/regexec.c.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regexec.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regexec.c.o
 .PHONY : libs/Onigmo/regexec.c.o
 
 libs/Onigmo/regexec.i: libs/Onigmo/regexec.c.i
@@ -311,7 +311,7 @@ libs/Onigmo/regexec.i: libs/Onigmo/regexec.c.i
 
 # target to preprocess a source file
 libs/Onigmo/regexec.c.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regexec.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regexec.c.i
 .PHONY : libs/Onigmo/regexec.c.i
 
 libs/Onigmo/regexec.s: libs/Onigmo/regexec.c.s
@@ -319,7 +319,7 @@ libs/Onigmo/regexec.s: libs/Onigmo/regexec.c.s
 
 # target to generate assembly for a file
 libs/Onigmo/regexec.c.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regexec.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regexec.c.s
 .PHONY : libs/Onigmo/regexec.c.s
 
 libs/Onigmo/regext.o: libs/Onigmo/regext.c.o
@@ -327,7 +327,7 @@ libs/Onigmo/regext.o: libs/Onigmo/regext.c.o
 
 # target to build an object file
 libs/Onigmo/regext.c.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regext.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regext.c.o
 .PHONY : libs/Onigmo/regext.c.o
 
 libs/Onigmo/regext.i: libs/Onigmo/regext.c.i
@@ -335,7 +335,7 @@ libs/Onigmo/regext.i: libs/Onigmo/regext.c.i
 
 # target to preprocess a source file
 libs/Onigmo/regext.c.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regext.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regext.c.i
 .PHONY : libs/Onigmo/regext.c.i
 
 libs/Onigmo/regext.s: libs/Onigmo/regext.c.s
@@ -343,7 +343,7 @@ libs/Onigmo/regext.s: libs/Onigmo/regext.c.s
 
 # target to generate assembly for a file
 libs/Onigmo/regext.c.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regext.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regext.c.s
 .PHONY : libs/Onigmo/regext.c.s
 
 libs/Onigmo/reggnu.o: libs/Onigmo/reggnu.c.o
@@ -351,7 +351,7 @@ libs/Onigmo/reggnu.o: libs/Onigmo/reggnu.c.o
 
 # target to build an object file
 libs/Onigmo/reggnu.c.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/reggnu.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/reggnu.c.o
 .PHONY : libs/Onigmo/reggnu.c.o
 
 libs/Onigmo/reggnu.i: libs/Onigmo/reggnu.c.i
@@ -359,7 +359,7 @@ libs/Onigmo/reggnu.i: libs/Onigmo/reggnu.c.i
 
 # target to preprocess a source file
 libs/Onigmo/reggnu.c.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/reggnu.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/reggnu.c.i
 .PHONY : libs/Onigmo/reggnu.c.i
 
 libs/Onigmo/reggnu.s: libs/Onigmo/reggnu.c.s
@@ -367,7 +367,7 @@ libs/Onigmo/reggnu.s: libs/Onigmo/reggnu.c.s
 
 # target to generate assembly for a file
 libs/Onigmo/reggnu.c.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/reggnu.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/reggnu.c.s
 .PHONY : libs/Onigmo/reggnu.c.s
 
 libs/Onigmo/regparse.o: libs/Onigmo/regparse.c.o
@@ -375,7 +375,7 @@ libs/Onigmo/regparse.o: libs/Onigmo/regparse.c.o
 
 # target to build an object file
 libs/Onigmo/regparse.c.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regparse.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regparse.c.o
 .PHONY : libs/Onigmo/regparse.c.o
 
 libs/Onigmo/regparse.i: libs/Onigmo/regparse.c.i
@@ -383,7 +383,7 @@ libs/Onigmo/regparse.i: libs/Onigmo/regparse.c.i
 
 # target to preprocess a source file
 libs/Onigmo/regparse.c.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regparse.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regparse.c.i
 .PHONY : libs/Onigmo/regparse.c.i
 
 libs/Onigmo/regparse.s: libs/Onigmo/regparse.c.s
@@ -391,7 +391,7 @@ libs/Onigmo/regparse.s: libs/Onigmo/regparse.c.s
 
 # target to generate assembly for a file
 libs/Onigmo/regparse.c.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regparse.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regparse.c.s
 .PHONY : libs/Onigmo/regparse.c.s
 
 libs/Onigmo/regposerr.o: libs/Onigmo/regposerr.c.o
@@ -399,7 +399,7 @@ libs/Onigmo/regposerr.o: libs/Onigmo/regposerr.c.o
 
 # target to build an object file
 libs/Onigmo/regposerr.c.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regposerr.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regposerr.c.o
 .PHONY : libs/Onigmo/regposerr.c.o
 
 libs/Onigmo/regposerr.i: libs/Onigmo/regposerr.c.i
@@ -407,7 +407,7 @@ libs/Onigmo/regposerr.i: libs/Onigmo/regposerr.c.i
 
 # target to preprocess a source file
 libs/Onigmo/regposerr.c.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regposerr.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regposerr.c.i
 .PHONY : libs/Onigmo/regposerr.c.i
 
 libs/Onigmo/regposerr.s: libs/Onigmo/regposerr.c.s
@@ -415,7 +415,7 @@ libs/Onigmo/regposerr.s: libs/Onigmo/regposerr.c.s
 
 # target to generate assembly for a file
 libs/Onigmo/regposerr.c.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regposerr.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regposerr.c.s
 .PHONY : libs/Onigmo/regposerr.c.s
 
 libs/Onigmo/regposix.o: libs/Onigmo/regposix.c.o
@@ -423,7 +423,7 @@ libs/Onigmo/regposix.o: libs/Onigmo/regposix.c.o
 
 # target to build an object file
 libs/Onigmo/regposix.c.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regposix.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regposix.c.o
 .PHONY : libs/Onigmo/regposix.c.o
 
 libs/Onigmo/regposix.i: libs/Onigmo/regposix.c.i
@@ -431,7 +431,7 @@ libs/Onigmo/regposix.i: libs/Onigmo/regposix.c.i
 
 # target to preprocess a source file
 libs/Onigmo/regposix.c.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regposix.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regposix.c.i
 .PHONY : libs/Onigmo/regposix.c.i
 
 libs/Onigmo/regposix.s: libs/Onigmo/regposix.c.s
@@ -439,7 +439,7 @@ libs/Onigmo/regposix.s: libs/Onigmo/regposix.c.s
 
 # target to generate assembly for a file
 libs/Onigmo/regposix.c.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regposix.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regposix.c.s
 .PHONY : libs/Onigmo/regposix.c.s
 
 libs/Onigmo/regsyntax.o: libs/Onigmo/regsyntax.c.o
@@ -447,7 +447,7 @@ libs/Onigmo/regsyntax.o: libs/Onigmo/regsyntax.c.o
 
 # target to build an object file
 libs/Onigmo/regsyntax.c.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regsyntax.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regsyntax.c.o
 .PHONY : libs/Onigmo/regsyntax.c.o
 
 libs/Onigmo/regsyntax.i: libs/Onigmo/regsyntax.c.i
@@ -455,7 +455,7 @@ libs/Onigmo/regsyntax.i: libs/Onigmo/regsyntax.c.i
 
 # target to preprocess a source file
 libs/Onigmo/regsyntax.c.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regsyntax.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regsyntax.c.i
 .PHONY : libs/Onigmo/regsyntax.c.i
 
 libs/Onigmo/regsyntax.s: libs/Onigmo/regsyntax.c.s
@@ -463,7 +463,7 @@ libs/Onigmo/regsyntax.s: libs/Onigmo/regsyntax.c.s
 
 # target to generate assembly for a file
 libs/Onigmo/regsyntax.c.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regsyntax.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regsyntax.c.s
 .PHONY : libs/Onigmo/regsyntax.c.s
 
 libs/Onigmo/regtrav.o: libs/Onigmo/regtrav.c.o
@@ -471,7 +471,7 @@ libs/Onigmo/regtrav.o: libs/Onigmo/regtrav.c.o
 
 # target to build an object file
 libs/Onigmo/regtrav.c.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regtrav.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regtrav.c.o
 .PHONY : libs/Onigmo/regtrav.c.o
 
 libs/Onigmo/regtrav.i: libs/Onigmo/regtrav.c.i
@@ -479,7 +479,7 @@ libs/Onigmo/regtrav.i: libs/Onigmo/regtrav.c.i
 
 # target to preprocess a source file
 libs/Onigmo/regtrav.c.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regtrav.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regtrav.c.i
 .PHONY : libs/Onigmo/regtrav.c.i
 
 libs/Onigmo/regtrav.s: libs/Onigmo/regtrav.c.s
@@ -487,7 +487,7 @@ libs/Onigmo/regtrav.s: libs/Onigmo/regtrav.c.s
 
 # target to generate assembly for a file
 libs/Onigmo/regtrav.c.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regtrav.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regtrav.c.s
 .PHONY : libs/Onigmo/regtrav.c.s
 
 libs/Onigmo/regversion.o: libs/Onigmo/regversion.c.o
@@ -495,7 +495,7 @@ libs/Onigmo/regversion.o: libs/Onigmo/regversion.c.o
 
 # target to build an object file
 libs/Onigmo/regversion.c.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regversion.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regversion.c.o
 .PHONY : libs/Onigmo/regversion.c.o
 
 libs/Onigmo/regversion.i: libs/Onigmo/regversion.c.i
@@ -503,7 +503,7 @@ libs/Onigmo/regversion.i: libs/Onigmo/regversion.c.i
 
 # target to preprocess a source file
 libs/Onigmo/regversion.c.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regversion.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regversion.c.i
 .PHONY : libs/Onigmo/regversion.c.i
 
 libs/Onigmo/regversion.s: libs/Onigmo/regversion.c.s
@@ -511,7 +511,7 @@ libs/Onigmo/regversion.s: libs/Onigmo/regversion.c.s
 
 # target to generate assembly for a file
 libs/Onigmo/regversion.c.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regversion.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/regversion.c.s
 .PHONY : libs/Onigmo/regversion.c.s
 
 libs/Onigmo/st.o: libs/Onigmo/st.c.o
@@ -519,7 +519,7 @@ libs/Onigmo/st.o: libs/Onigmo/st.c.o
 
 # target to build an object file
 libs/Onigmo/st.c.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/st.c.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/st.c.o
 .PHONY : libs/Onigmo/st.c.o
 
 libs/Onigmo/st.i: libs/Onigmo/st.c.i
@@ -527,7 +527,7 @@ libs/Onigmo/st.i: libs/Onigmo/st.c.i
 
 # target to preprocess a source file
 libs/Onigmo/st.c.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/st.c.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/st.c.i
 .PHONY : libs/Onigmo/st.c.i
 
 libs/Onigmo/st.s: libs/Onigmo/st.c.s
@@ -535,7 +535,7 @@ libs/Onigmo/st.s: libs/Onigmo/st.c.s
 
 # target to generate assembly for a file
 libs/Onigmo/st.c.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/st.c.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/Onigmo/st.c.s
 .PHONY : libs/Onigmo/st.c.s
 
 libs/jsoncpp/dist/jsoncpp.o: libs/jsoncpp/dist/jsoncpp.cpp.o
@@ -543,7 +543,7 @@ libs/jsoncpp/dist/jsoncpp.o: libs/jsoncpp/dist/jsoncpp.cpp.o
 
 # target to build an object file
 libs/jsoncpp/dist/jsoncpp.cpp.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/jsoncpp/dist/jsoncpp.cpp.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/jsoncpp/dist/jsoncpp.cpp.o
 .PHONY : libs/jsoncpp/dist/jsoncpp.cpp.o
 
 libs/jsoncpp/dist/jsoncpp.i: libs/jsoncpp/dist/jsoncpp.cpp.i
@@ -551,7 +551,7 @@ libs/jsoncpp/dist/jsoncpp.i: libs/jsoncpp/dist/jsoncpp.cpp.i
 
 # target to preprocess a source file
 libs/jsoncpp/dist/jsoncpp.cpp.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/jsoncpp/dist/jsoncpp.cpp.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/jsoncpp/dist/jsoncpp.cpp.i
 .PHONY : libs/jsoncpp/dist/jsoncpp.cpp.i
 
 libs/jsoncpp/dist/jsoncpp.s: libs/jsoncpp/dist/jsoncpp.cpp.s
@@ -559,7 +559,7 @@ libs/jsoncpp/dist/jsoncpp.s: libs/jsoncpp/dist/jsoncpp.cpp.s
 
 # target to generate assembly for a file
 libs/jsoncpp/dist/jsoncpp.cpp.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/jsoncpp/dist/jsoncpp.cpp.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/jsoncpp/dist/jsoncpp.cpp.s
 .PHONY : libs/jsoncpp/dist/jsoncpp.cpp.s
 
 libs/tinyxml2/tinyxml2.o: libs/tinyxml2/tinyxml2.cpp.o
@@ -567,7 +567,7 @@ libs/tinyxml2/tinyxml2.o: libs/tinyxml2/tinyxml2.cpp.o
 
 # target to build an object file
 libs/tinyxml2/tinyxml2.cpp.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tinyxml2/tinyxml2.cpp.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tinyxml2/tinyxml2.cpp.o
 .PHONY : libs/tinyxml2/tinyxml2.cpp.o
 
 libs/tinyxml2/tinyxml2.i: libs/tinyxml2/tinyxml2.cpp.i
@@ -575,7 +575,7 @@ libs/tinyxml2/tinyxml2.i: libs/tinyxml2/tinyxml2.cpp.i
 
 # target to preprocess a source file
 libs/tinyxml2/tinyxml2.cpp.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tinyxml2/tinyxml2.cpp.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tinyxml2/tinyxml2.cpp.i
 .PHONY : libs/tinyxml2/tinyxml2.cpp.i
 
 libs/tinyxml2/tinyxml2.s: libs/tinyxml2/tinyxml2.cpp.s
@@ -583,7 +583,7 @@ libs/tinyxml2/tinyxml2.s: libs/tinyxml2/tinyxml2.cpp.s
 
 # target to generate assembly for a file
 libs/tinyxml2/tinyxml2.cpp.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tinyxml2/tinyxml2.cpp.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tinyxml2/tinyxml2.cpp.s
 .PHONY : libs/tinyxml2/tinyxml2.cpp.s
 
 libs/tm-parser/textmate/extensions/extension.o: libs/tm-parser/textmate/extensions/extension.cpp.o
@@ -591,7 +591,7 @@ libs/tm-parser/textmate/extensions/extension.o: libs/tm-parser/textmate/extensio
 
 # target to build an object file
 libs/tm-parser/textmate/extensions/extension.cpp.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/extensions/extension.cpp.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/extensions/extension.cpp.o
 .PHONY : libs/tm-parser/textmate/extensions/extension.cpp.o
 
 libs/tm-parser/textmate/extensions/extension.i: libs/tm-parser/textmate/extensions/extension.cpp.i
@@ -599,7 +599,7 @@ libs/tm-parser/textmate/extensions/extension.i: libs/tm-parser/textmate/extensio
 
 # target to preprocess a source file
 libs/tm-parser/textmate/extensions/extension.cpp.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/extensions/extension.cpp.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/extensions/extension.cpp.i
 .PHONY : libs/tm-parser/textmate/extensions/extension.cpp.i
 
 libs/tm-parser/textmate/extensions/extension.s: libs/tm-parser/textmate/extensions/extension.cpp.s
@@ -607,7 +607,7 @@ libs/tm-parser/textmate/extensions/extension.s: libs/tm-parser/textmate/extensio
 
 # target to generate assembly for a file
 libs/tm-parser/textmate/extensions/extension.cpp.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/extensions/extension.cpp.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/extensions/extension.cpp.s
 .PHONY : libs/tm-parser/textmate/extensions/extension.cpp.s
 
 libs/tm-parser/textmate/extensions/utf8.o: libs/tm-parser/textmate/extensions/utf8.cpp.o
@@ -615,7 +615,7 @@ libs/tm-parser/textmate/extensions/utf8.o: libs/tm-parser/textmate/extensions/ut
 
 # target to build an object file
 libs/tm-parser/textmate/extensions/utf8.cpp.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/extensions/utf8.cpp.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/extensions/utf8.cpp.o
 .PHONY : libs/tm-parser/textmate/extensions/utf8.cpp.o
 
 libs/tm-parser/textmate/extensions/utf8.i: libs/tm-parser/textmate/extensions/utf8.cpp.i
@@ -623,7 +623,7 @@ libs/tm-parser/textmate/extensions/utf8.i: libs/tm-parser/textmate/extensions/ut
 
 # target to preprocess a source file
 libs/tm-parser/textmate/extensions/utf8.cpp.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/extensions/utf8.cpp.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/extensions/utf8.cpp.i
 .PHONY : libs/tm-parser/textmate/extensions/utf8.cpp.i
 
 libs/tm-parser/textmate/extensions/utf8.s: libs/tm-parser/textmate/extensions/utf8.cpp.s
@@ -631,7 +631,7 @@ libs/tm-parser/textmate/extensions/utf8.s: libs/tm-parser/textmate/extensions/ut
 
 # target to generate assembly for a file
 libs/tm-parser/textmate/extensions/utf8.cpp.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/extensions/utf8.cpp.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/extensions/utf8.cpp.s
 .PHONY : libs/tm-parser/textmate/extensions/utf8.cpp.s
 
 libs/tm-parser/textmate/extensions/util.o: libs/tm-parser/textmate/extensions/util.cpp.o
@@ -639,7 +639,7 @@ libs/tm-parser/textmate/extensions/util.o: libs/tm-parser/textmate/extensions/ut
 
 # target to build an object file
 libs/tm-parser/textmate/extensions/util.cpp.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/extensions/util.cpp.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/extensions/util.cpp.o
 .PHONY : libs/tm-parser/textmate/extensions/util.cpp.o
 
 libs/tm-parser/textmate/extensions/util.i: libs/tm-parser/textmate/extensions/util.cpp.i
@@ -647,7 +647,7 @@ libs/tm-parser/textmate/extensions/util.i: libs/tm-parser/textmate/extensions/ut
 
 # target to preprocess a source file
 libs/tm-parser/textmate/extensions/util.cpp.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/extensions/util.cpp.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/extensions/util.cpp.i
 .PHONY : libs/tm-parser/textmate/extensions/util.cpp.i
 
 libs/tm-parser/textmate/extensions/util.s: libs/tm-parser/textmate/extensions/util.cpp.s
@@ -655,7 +655,7 @@ libs/tm-parser/textmate/extensions/util.s: libs/tm-parser/textmate/extensions/ut
 
 # target to generate assembly for a file
 libs/tm-parser/textmate/extensions/util.cpp.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/extensions/util.cpp.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/extensions/util.cpp.s
 .PHONY : libs/tm-parser/textmate/extensions/util.cpp.s
 
 libs/tm-parser/textmate/parser/grammar.o: libs/tm-parser/textmate/parser/grammar.cpp.o
@@ -663,7 +663,7 @@ libs/tm-parser/textmate/parser/grammar.o: libs/tm-parser/textmate/parser/grammar
 
 # target to build an object file
 libs/tm-parser/textmate/parser/grammar.cpp.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/parser/grammar.cpp.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/parser/grammar.cpp.o
 .PHONY : libs/tm-parser/textmate/parser/grammar.cpp.o
 
 libs/tm-parser/textmate/parser/grammar.i: libs/tm-parser/textmate/parser/grammar.cpp.i
@@ -671,7 +671,7 @@ libs/tm-parser/textmate/parser/grammar.i: libs/tm-parser/textmate/parser/grammar
 
 # target to preprocess a source file
 libs/tm-parser/textmate/parser/grammar.cpp.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/parser/grammar.cpp.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/parser/grammar.cpp.i
 .PHONY : libs/tm-parser/textmate/parser/grammar.cpp.i
 
 libs/tm-parser/textmate/parser/grammar.s: libs/tm-parser/textmate/parser/grammar.cpp.s
@@ -679,7 +679,7 @@ libs/tm-parser/textmate/parser/grammar.s: libs/tm-parser/textmate/parser/grammar
 
 # target to generate assembly for a file
 libs/tm-parser/textmate/parser/grammar.cpp.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/parser/grammar.cpp.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/parser/grammar.cpp.s
 .PHONY : libs/tm-parser/textmate/parser/grammar.cpp.s
 
 libs/tm-parser/textmate/parser/parser.o: libs/tm-parser/textmate/parser/parser.cpp.o
@@ -687,7 +687,7 @@ libs/tm-parser/textmate/parser/parser.o: libs/tm-parser/textmate/parser/parser.c
 
 # target to build an object file
 libs/tm-parser/textmate/parser/parser.cpp.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/parser/parser.cpp.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/parser/parser.cpp.o
 .PHONY : libs/tm-parser/textmate/parser/parser.cpp.o
 
 libs/tm-parser/textmate/parser/parser.i: libs/tm-parser/textmate/parser/parser.cpp.i
@@ -695,7 +695,7 @@ libs/tm-parser/textmate/parser/parser.i: libs/tm-parser/textmate/parser/parser.c
 
 # target to preprocess a source file
 libs/tm-parser/textmate/parser/parser.cpp.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/parser/parser.cpp.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/parser/parser.cpp.i
 .PHONY : libs/tm-parser/textmate/parser/parser.cpp.i
 
 libs/tm-parser/textmate/parser/parser.s: libs/tm-parser/textmate/parser/parser.cpp.s
@@ -703,7 +703,7 @@ libs/tm-parser/textmate/parser/parser.s: libs/tm-parser/textmate/parser/parser.c
 
 # target to generate assembly for a file
 libs/tm-parser/textmate/parser/parser.cpp.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/parser/parser.cpp.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/parser/parser.cpp.s
 .PHONY : libs/tm-parser/textmate/parser/parser.cpp.s
 
 libs/tm-parser/textmate/parser/pattern.o: libs/tm-parser/textmate/parser/pattern.cpp.o
@@ -711,7 +711,7 @@ libs/tm-parser/textmate/parser/pattern.o: libs/tm-parser/textmate/parser/pattern
 
 # target to build an object file
 libs/tm-parser/textmate/parser/pattern.cpp.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/parser/pattern.cpp.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/parser/pattern.cpp.o
 .PHONY : libs/tm-parser/textmate/parser/pattern.cpp.o
 
 libs/tm-parser/textmate/parser/pattern.i: libs/tm-parser/textmate/parser/pattern.cpp.i
@@ -719,7 +719,7 @@ libs/tm-parser/textmate/parser/pattern.i: libs/tm-parser/textmate/parser/pattern
 
 # target to preprocess a source file
 libs/tm-parser/textmate/parser/pattern.cpp.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/parser/pattern.cpp.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/parser/pattern.cpp.i
 .PHONY : libs/tm-parser/textmate/parser/pattern.cpp.i
 
 libs/tm-parser/textmate/parser/pattern.s: libs/tm-parser/textmate/parser/pattern.cpp.s
@@ -727,7 +727,7 @@ libs/tm-parser/textmate/parser/pattern.s: libs/tm-parser/textmate/parser/pattern
 
 # target to generate assembly for a file
 libs/tm-parser/textmate/parser/pattern.cpp.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/parser/pattern.cpp.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/parser/pattern.cpp.s
 .PHONY : libs/tm-parser/textmate/parser/pattern.cpp.s
 
 libs/tm-parser/textmate/parser/reader.o: libs/tm-parser/textmate/parser/reader.cpp.o
@@ -735,7 +735,7 @@ libs/tm-parser/textmate/parser/reader.o: libs/tm-parser/textmate/parser/reader.c
 
 # target to build an object file
 libs/tm-parser/textmate/parser/reader.cpp.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/parser/reader.cpp.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/parser/reader.cpp.o
 .PHONY : libs/tm-parser/textmate/parser/reader.cpp.o
 
 libs/tm-parser/textmate/parser/reader.i: libs/tm-parser/textmate/parser/reader.cpp.i
@@ -743,7 +743,7 @@ libs/tm-parser/textmate/parser/reader.i: libs/tm-parser/textmate/parser/reader.c
 
 # target to preprocess a source file
 libs/tm-parser/textmate/parser/reader.cpp.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/parser/reader.cpp.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/parser/reader.cpp.i
 .PHONY : libs/tm-parser/textmate/parser/reader.cpp.i
 
 libs/tm-parser/textmate/parser/reader.s: libs/tm-parser/textmate/parser/reader.cpp.s
@@ -751,7 +751,7 @@ libs/tm-parser/textmate/parser/reader.s: libs/tm-parser/textmate/parser/reader.c
 
 # target to generate assembly for a file
 libs/tm-parser/textmate/parser/reader.cpp.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/parser/reader.cpp.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/parser/reader.cpp.s
 .PHONY : libs/tm-parser/textmate/parser/reader.cpp.s
 
 libs/tm-parser/textmate/resources/grammars.o: libs/tm-parser/textmate/resources/grammars.cpp.o
@@ -759,7 +759,7 @@ libs/tm-parser/textmate/resources/grammars.o: libs/tm-parser/textmate/resources/
 
 # target to build an object file
 libs/tm-parser/textmate/resources/grammars.cpp.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/resources/grammars.cpp.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/resources/grammars.cpp.o
 .PHONY : libs/tm-parser/textmate/resources/grammars.cpp.o
 
 libs/tm-parser/textmate/resources/grammars.i: libs/tm-parser/textmate/resources/grammars.cpp.i
@@ -767,7 +767,7 @@ libs/tm-parser/textmate/resources/grammars.i: libs/tm-parser/textmate/resources/
 
 # target to preprocess a source file
 libs/tm-parser/textmate/resources/grammars.cpp.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/resources/grammars.cpp.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/resources/grammars.cpp.i
 .PHONY : libs/tm-parser/textmate/resources/grammars.cpp.i
 
 libs/tm-parser/textmate/resources/grammars.s: libs/tm-parser/textmate/resources/grammars.cpp.s
@@ -775,7 +775,7 @@ libs/tm-parser/textmate/resources/grammars.s: libs/tm-parser/textmate/resources/
 
 # target to generate assembly for a file
 libs/tm-parser/textmate/resources/grammars.cpp.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/resources/grammars.cpp.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/resources/grammars.cpp.s
 .PHONY : libs/tm-parser/textmate/resources/grammars.cpp.s
 
 libs/tm-parser/textmate/resources/themes.o: libs/tm-parser/textmate/resources/themes.cpp.o
@@ -783,7 +783,7 @@ libs/tm-parser/textmate/resources/themes.o: libs/tm-parser/textmate/resources/th
 
 # target to build an object file
 libs/tm-parser/textmate/resources/themes.cpp.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/resources/themes.cpp.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/resources/themes.cpp.o
 .PHONY : libs/tm-parser/textmate/resources/themes.cpp.o
 
 libs/tm-parser/textmate/resources/themes.i: libs/tm-parser/textmate/resources/themes.cpp.i
@@ -791,7 +791,7 @@ libs/tm-parser/textmate/resources/themes.i: libs/tm-parser/textmate/resources/th
 
 # target to preprocess a source file
 libs/tm-parser/textmate/resources/themes.cpp.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/resources/themes.cpp.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/resources/themes.cpp.i
 .PHONY : libs/tm-parser/textmate/resources/themes.cpp.i
 
 libs/tm-parser/textmate/resources/themes.s: libs/tm-parser/textmate/resources/themes.cpp.s
@@ -799,7 +799,7 @@ libs/tm-parser/textmate/resources/themes.s: libs/tm-parser/textmate/resources/th
 
 # target to generate assembly for a file
 libs/tm-parser/textmate/resources/themes.cpp.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/resources/themes.cpp.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/resources/themes.cpp.s
 .PHONY : libs/tm-parser/textmate/resources/themes.cpp.s
 
 libs/tm-parser/textmate/scopes/match.o: libs/tm-parser/textmate/scopes/match.cpp.o
@@ -807,7 +807,7 @@ libs/tm-parser/textmate/scopes/match.o: libs/tm-parser/textmate/scopes/match.cpp
 
 # target to build an object file
 libs/tm-parser/textmate/scopes/match.cpp.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/scopes/match.cpp.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/scopes/match.cpp.o
 .PHONY : libs/tm-parser/textmate/scopes/match.cpp.o
 
 libs/tm-parser/textmate/scopes/match.i: libs/tm-parser/textmate/scopes/match.cpp.i
@@ -815,7 +815,7 @@ libs/tm-parser/textmate/scopes/match.i: libs/tm-parser/textmate/scopes/match.cpp
 
 # target to preprocess a source file
 libs/tm-parser/textmate/scopes/match.cpp.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/scopes/match.cpp.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/scopes/match.cpp.i
 .PHONY : libs/tm-parser/textmate/scopes/match.cpp.i
 
 libs/tm-parser/textmate/scopes/match.s: libs/tm-parser/textmate/scopes/match.cpp.s
@@ -823,7 +823,7 @@ libs/tm-parser/textmate/scopes/match.s: libs/tm-parser/textmate/scopes/match.cpp
 
 # target to generate assembly for a file
 libs/tm-parser/textmate/scopes/match.cpp.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/scopes/match.cpp.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/scopes/match.cpp.s
 .PHONY : libs/tm-parser/textmate/scopes/match.cpp.s
 
 libs/tm-parser/textmate/scopes/parse.o: libs/tm-parser/textmate/scopes/parse.cpp.o
@@ -831,7 +831,7 @@ libs/tm-parser/textmate/scopes/parse.o: libs/tm-parser/textmate/scopes/parse.cpp
 
 # target to build an object file
 libs/tm-parser/textmate/scopes/parse.cpp.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/scopes/parse.cpp.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/scopes/parse.cpp.o
 .PHONY : libs/tm-parser/textmate/scopes/parse.cpp.o
 
 libs/tm-parser/textmate/scopes/parse.i: libs/tm-parser/textmate/scopes/parse.cpp.i
@@ -839,7 +839,7 @@ libs/tm-parser/textmate/scopes/parse.i: libs/tm-parser/textmate/scopes/parse.cpp
 
 # target to preprocess a source file
 libs/tm-parser/textmate/scopes/parse.cpp.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/scopes/parse.cpp.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/scopes/parse.cpp.i
 .PHONY : libs/tm-parser/textmate/scopes/parse.cpp.i
 
 libs/tm-parser/textmate/scopes/parse.s: libs/tm-parser/textmate/scopes/parse.cpp.s
@@ -847,7 +847,7 @@ libs/tm-parser/textmate/scopes/parse.s: libs/tm-parser/textmate/scopes/parse.cpp
 
 # target to generate assembly for a file
 libs/tm-parser/textmate/scopes/parse.cpp.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/scopes/parse.cpp.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/scopes/parse.cpp.s
 .PHONY : libs/tm-parser/textmate/scopes/parse.cpp.s
 
 libs/tm-parser/textmate/scopes/scope.o: libs/tm-parser/textmate/scopes/scope.cpp.o
@@ -855,7 +855,7 @@ libs/tm-parser/textmate/scopes/scope.o: libs/tm-parser/textmate/scopes/scope.cpp
 
 # target to build an object file
 libs/tm-parser/textmate/scopes/scope.cpp.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/scopes/scope.cpp.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/scopes/scope.cpp.o
 .PHONY : libs/tm-parser/textmate/scopes/scope.cpp.o
 
 libs/tm-parser/textmate/scopes/scope.i: libs/tm-parser/textmate/scopes/scope.cpp.i
@@ -863,7 +863,7 @@ libs/tm-parser/textmate/scopes/scope.i: libs/tm-parser/textmate/scopes/scope.cpp
 
 # target to preprocess a source file
 libs/tm-parser/textmate/scopes/scope.cpp.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/scopes/scope.cpp.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/scopes/scope.cpp.i
 .PHONY : libs/tm-parser/textmate/scopes/scope.cpp.i
 
 libs/tm-parser/textmate/scopes/scope.s: libs/tm-parser/textmate/scopes/scope.cpp.s
@@ -871,7 +871,7 @@ libs/tm-parser/textmate/scopes/scope.s: libs/tm-parser/textmate/scopes/scope.cpp
 
 # target to generate assembly for a file
 libs/tm-parser/textmate/scopes/scope.cpp.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/scopes/scope.cpp.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/scopes/scope.cpp.s
 .PHONY : libs/tm-parser/textmate/scopes/scope.cpp.s
 
 libs/tm-parser/textmate/scopes/types.o: libs/tm-parser/textmate/scopes/types.cpp.o
@@ -879,7 +879,7 @@ libs/tm-parser/textmate/scopes/types.o: libs/tm-parser/textmate/scopes/types.cpp
 
 # target to build an object file
 libs/tm-parser/textmate/scopes/types.cpp.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/scopes/types.cpp.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/scopes/types.cpp.o
 .PHONY : libs/tm-parser/textmate/scopes/types.cpp.o
 
 libs/tm-parser/textmate/scopes/types.i: libs/tm-parser/textmate/scopes/types.cpp.i
@@ -887,7 +887,7 @@ libs/tm-parser/textmate/scopes/types.i: libs/tm-parser/textmate/scopes/types.cpp
 
 # target to preprocess a source file
 libs/tm-parser/textmate/scopes/types.cpp.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/scopes/types.cpp.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/scopes/types.cpp.i
 .PHONY : libs/tm-parser/textmate/scopes/types.cpp.i
 
 libs/tm-parser/textmate/scopes/types.s: libs/tm-parser/textmate/scopes/types.cpp.s
@@ -895,7 +895,7 @@ libs/tm-parser/textmate/scopes/types.s: libs/tm-parser/textmate/scopes/types.cpp
 
 # target to generate assembly for a file
 libs/tm-parser/textmate/scopes/types.cpp.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/scopes/types.cpp.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/scopes/types.cpp.s
 .PHONY : libs/tm-parser/textmate/scopes/types.cpp.s
 
 libs/tm-parser/textmate/textmate.o: libs/tm-parser/textmate/textmate.cpp.o
@@ -903,7 +903,7 @@ libs/tm-parser/textmate/textmate.o: libs/tm-parser/textmate/textmate.cpp.o
 
 # target to build an object file
 libs/tm-parser/textmate/textmate.cpp.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/textmate.cpp.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/textmate.cpp.o
 .PHONY : libs/tm-parser/textmate/textmate.cpp.o
 
 libs/tm-parser/textmate/textmate.i: libs/tm-parser/textmate/textmate.cpp.i
@@ -911,7 +911,7 @@ libs/tm-parser/textmate/textmate.i: libs/tm-parser/textmate/textmate.cpp.i
 
 # target to preprocess a source file
 libs/tm-parser/textmate/textmate.cpp.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/textmate.cpp.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/textmate.cpp.i
 .PHONY : libs/tm-parser/textmate/textmate.cpp.i
 
 libs/tm-parser/textmate/textmate.s: libs/tm-parser/textmate/textmate.cpp.s
@@ -919,7 +919,7 @@ libs/tm-parser/textmate/textmate.s: libs/tm-parser/textmate/textmate.cpp.s
 
 # target to generate assembly for a file
 libs/tm-parser/textmate/textmate.cpp.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/textmate.cpp.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/textmate.cpp.s
 .PHONY : libs/tm-parser/textmate/textmate.cpp.s
 
 libs/tm-parser/textmate/theme/theme.o: libs/tm-parser/textmate/theme/theme.cpp.o
@@ -927,7 +927,7 @@ libs/tm-parser/textmate/theme/theme.o: libs/tm-parser/textmate/theme/theme.cpp.o
 
 # target to build an object file
 libs/tm-parser/textmate/theme/theme.cpp.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/theme/theme.cpp.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/theme/theme.cpp.o
 .PHONY : libs/tm-parser/textmate/theme/theme.cpp.o
 
 libs/tm-parser/textmate/theme/theme.i: libs/tm-parser/textmate/theme/theme.cpp.i
@@ -935,7 +935,7 @@ libs/tm-parser/textmate/theme/theme.i: libs/tm-parser/textmate/theme/theme.cpp.i
 
 # target to preprocess a source file
 libs/tm-parser/textmate/theme/theme.cpp.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/theme/theme.cpp.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/theme/theme.cpp.i
 .PHONY : libs/tm-parser/textmate/theme/theme.cpp.i
 
 libs/tm-parser/textmate/theme/theme.s: libs/tm-parser/textmate/theme/theme.cpp.s
@@ -943,7 +943,7 @@ libs/tm-parser/textmate/theme/theme.s: libs/tm-parser/textmate/theme/theme.cpp.s
 
 # target to generate assembly for a file
 libs/tm-parser/textmate/theme/theme.cpp.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/theme/theme.cpp.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/theme/theme.cpp.s
 .PHONY : libs/tm-parser/textmate/theme/theme.cpp.s
 
 libs/tm-parser/textmate/theme/util.o: libs/tm-parser/textmate/theme/util.cpp.o
@@ -951,7 +951,7 @@ libs/tm-parser/textmate/theme/util.o: libs/tm-parser/textmate/theme/util.cpp.o
 
 # target to build an object file
 libs/tm-parser/textmate/theme/util.cpp.o:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/theme/util.cpp.o
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/theme/util.cpp.o
 .PHONY : libs/tm-parser/textmate/theme/util.cpp.o
 
 libs/tm-parser/textmate/theme/util.i: libs/tm-parser/textmate/theme/util.cpp.i
@@ -959,7 +959,7 @@ libs/tm-parser/textmate/theme/util.i: libs/tm-parser/textmate/theme/util.cpp.i
 
 # target to preprocess a source file
 libs/tm-parser/textmate/theme/util.cpp.i:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/theme/util.cpp.i
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/theme/util.cpp.i
 .PHONY : libs/tm-parser/textmate/theme/util.cpp.i
 
 libs/tm-parser/textmate/theme/util.s: libs/tm-parser/textmate/theme/util.cpp.s
@@ -967,7 +967,7 @@ libs/tm-parser/textmate/theme/util.s: libs/tm-parser/textmate/theme/util.cpp.s
 
 # target to generate assembly for a file
 libs/tm-parser/textmate/theme/util.cpp.s:
-	cd /home/iceman/Developer/Projects/emscripten && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/theme/util.cpp.s
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/theme/util.cpp.s
 .PHONY : libs/tm-parser/textmate/theme/util.cpp.s
 
 # Help Target
@@ -1095,6 +1095,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/iceman/Developer/Projects/emscripten && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

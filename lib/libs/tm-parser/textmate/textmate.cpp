@@ -360,6 +360,12 @@ void dump_tokens(std::map<size_t, scope::scope_t> &scopes) {
   }
 }
 
+block_data_t _previous_block_data;
+block_data_t* Textmate::previous_block_data()
+{
+  return &_previous_block_data;
+}
+
 std::vector<textstyle_t>
 Textmate::run_highlighter(char *_text, language_info_ptr lang, theme_ptr theme,
                           block_data_t *block, block_data_t *prev_block,
@@ -506,6 +512,7 @@ Textmate::run_highlighter(char *_text, language_info_ptr lang, theme_ptr theme,
     }
   }
 
+  _previous_block_data.parser_state = parser_state;
   return textstyle_buffer;
 }
 

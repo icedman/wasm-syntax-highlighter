@@ -121,6 +121,7 @@ public:
   run_highlighter(char *_text, language_info_ptr lang, theme_ptr theme,
                   block_data_t *block = NULL, block_data_t *prev = NULL,
                   block_data_t *next = NULL, std::vector<span_info_t> *span_infos = NULL);
+  static block_data_t* previous_block_data();
   static theme_info_t theme_info();
   static theme_ptr theme();
   static bool has_running_threads();

@@ -25,7 +25,10 @@ std::vector<textstyle_t> text_styles;
 
 EXPORT int highlight(const char *code, bool start)
 {
-	text_styles = Textmate::run_highlighter((char*)code, Textmate::language_info(0), Textmate::theme());
+	text_styles = Textmate::run_highlighter((char*)code, Textmate::language_info(0), Textmate::theme(),
+			NULL,
+			start ? NULL : Textmate::previous_block_data()
+			);
 	return text_styles.size();
 }
 
