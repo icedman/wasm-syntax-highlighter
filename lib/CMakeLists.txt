@@ -5,6 +5,8 @@ project(cpp_library)
 set(CPP_LIBRARY_TYPE "STATIC" CACHE STRING "Library type to build")
 set_property(CACHE CPP_LIBRARY_TYPE PROPERTY STRINGS STATIC SHARED)
 
+add_definitions(-DDISABLE_DEFAULT_THEME=1)
+add_definitions(-DDISABLE_DEFAULT_GRAMMAR=1)
 add_definitions(-DDISABLE_RESOURCE_CACHING=1)
 add_definitions(-DDISABLE_PLIST_GRAMMARS=1)
 add_definitions(-DDISABLE_ADD_GRAMMAR_THREADS=1)

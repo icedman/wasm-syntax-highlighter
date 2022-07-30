@@ -17,8 +17,8 @@
 
 EXPORT void initialize()
 {
-	Textmate::load_theme_data(THEME_MONOKAI);
-	Textmate::load_language_data(NULL);
+	// Textmate::load_theme_data(THEME_MONOKAI);
+	// Textmate::load_language_data(GRAMMAR_CPP);
 }
 
 static char string_buffer[MAX_BUFFER_LENGTH];
