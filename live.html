@@ -1,8 +1,11 @@
 <html>
 <body>
 <style>
+* {
+  font-size:  14pt;
+}
 .code {
-  font-size: 14pt;
+  font-size: 16pt;
   padding: 20px;
 }
 .code i {
@@ -54,6 +57,23 @@ function run_hl(lines, target, onDone) {
   }
 }
 
+async function reload_theme() {
+  // load a theme
+  {
+    var select = document.getElementById('theme');
+    // const response = await fetch('extensions/theme-monokai/themes/monokai-color-theme.json');
+    const response = await fetch(select.value);
+    const text = await response.text();
+    Module.loadTheme(text);
+
+    var fg = Module.themeForeground();
+    var bg = Module.themeBackground();
+
+    var target = document.getElementById('output');
+    target.setAttribute("style", `color: rgb(${fg.r},${fg.g},${fg.b}); background: rgb(${bg.r},${bg.g},${bg.b})`);
+  }
+}
+
 async function run_update() {
   var startTime = performance.now();
 
@@ -76,19 +96,8 @@ async function run_update() {
 }
 
 async function run_main() {
-  var target = document.getElementById('output');
 
-  // load a theme
-  {
-    // const response = await fetch('extensions/theme-monokai/themes/monokai-color-theme.json');
-    const response = await fetch('extensions/dracula-theme.theme-dracula-2.24.2/theme/dracula.json');
-    const text = await response.text();
-    Module.loadTheme(text);
-  }
-
-  var fg = Module.themeForeground();
-  var bg = Module.themeBackground();
-  target.setAttribute("style", `color: rgb(${fg.r},${fg.g},${fg.b}); background: rgb(${bg.r},${bg.g},${bg.b})`);
+  reload_theme();
 
   // load grammar
   {
@@ -171,7 +180,16 @@ monitorRunDependencies: (function(left) {})
 </script>
 <script async type="text/javascript" src="syntax_highlight.js"></script>
 
-<textarea id="source" rows="10" cols="80" oninput="run_update()"></textarea>
+<select id="theme" onchange="reload_theme(); run_update();">
+  <option selected value="extensions/theme-monokai/themes/monokai-color-theme.json">Monokai</option>
+  <option value="extensions/theme-kimbie-dark/themes/kimbie-dark-color-theme.json">Kimbie Dark</option>
+  <option value="extensions/uloco.theme-bluloco-dark-3.1.1/themes/bluloco-dark-italic-color-theme.json">Bluloco</option>
+  <option value="extensions/dracula-theme.theme-dracula-2.24.2/theme/dracula.json">Dracula</option>
+</select>
+<hr/>
+<textarea id="source" rows="10" cols="80" oninput="run_update()">int main(int argc, char **argv) {
+  printf("hello world\n");
+}</textarea>
 <hr/>
 <div id="output" class="code"></div>
 
