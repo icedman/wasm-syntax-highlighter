@@ -12,7 +12,11 @@
   display: block;
 }
 </style>
+<style id="css">
+</style>
 <script>
+var css = {};
+
 function append_styled_line(styled, target) {
   var line = document.createElement('div');
 
@@ -50,9 +54,28 @@ function run_hl(lines, target, onDone) {
   }
 }
 
-async function run_main() {
-
+async function run_update() {
   var startTime = performance.now();
+
+  // load code
+  var target = document.getElementById('output');
+  target.innerHTML = '';
+  
+  {
+    // const response = await fetch('tests/keys_test.cpp');
+    // const response = await fetch('tests/tinywl.c');
+    // const text = await response.text();
+    const text = document.getElementById('source').value;
+    const lines = text.split('\n');
+    Module.highlight("", true);
+    run_hl(lines, target, () => {
+      endTime = performance.now();
+      console.log(`done in ${endTime - startTime} milliseconds`);
+    });
+  }
+}
+
+async function run_main() {
   var target = document.getElementById('output');
 
   // load a theme
@@ -74,18 +97,7 @@ async function run_main() {
     Module.loadGrammar(text);
   }
 
-  // load code
-  {
-    // const response = await fetch('tests/keys_test.cpp');
-    const response = await fetch('tests/tinywl.c');
-    const text = await response.text();
-    const lines = text.split('\n');
-    Module.highlight("", true);
-    run_hl(lines, target, () => {
-      endTime = performance.now();
-      console.log(`done in ${endTime - startTime} milliseconds`);
-    });
-  }
+  run_update();
 }
 
 var Module = {
@@ -159,6 +171,8 @@ monitorRunDependencies: (function(left) {})
 </script>
 <script async type="text/javascript" src="syntax_highlight.js"></script>
 
+<textarea id="source" rows="10" cols="80" oninput="run_update()"></textarea>
+<hr/>
 <div id="output" class="code"></div>
 
 </body>

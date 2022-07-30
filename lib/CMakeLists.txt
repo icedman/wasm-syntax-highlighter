@@ -10,7 +10,7 @@ add_definitions(-DDISABLE_DEFAULT_GRAMMAR=1)
 add_definitions(-DDISABLE_RESOURCE_CACHING=1)
 add_definitions(-DDISABLE_PLIST_GRAMMARS=1)
 add_definitions(-DDISABLE_ADD_GRAMMAR_THREADS=1)
-add_definitions(-Os -s WASM=1)
+add_definitions(-Os -s WASM=1 -s ALLOW_MEMORY_GROWTH=1 -s MODULARIZE=1)
 
 add_library(cpp_lib ${CPP_LIBRARY_TYPE} lib.cpp
 	#./libs/tinyxml2/tinyxml2.cpp
