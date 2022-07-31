@@ -74,6 +74,17 @@ async function reload_theme() {
   }
 }
 
+async function reload_grammar() {
+  // load grammar
+  {
+    var select = document.getElementById('language');
+    // const response = await fetch('extensions/cpp/syntaxes/c.tmLanguage.json');
+    const response = await fetch(select.value);
+    const text = await response.text();
+    Module.loadGrammar(text);
+  }
+}
+
 async function run_update() {
   var startTime = performance.now();
 
@@ -95,24 +106,19 @@ async function run_update() {
   }
 }
 
-async function run_main() {
+function reload_script() {
+}
 
-  reload_theme();
-
-  // load grammar
-  {
-    const response = await fetch('extensions/cpp/syntaxes/c.tmLanguage.json');
-    const text = await response.text();
-    Module.loadGrammar(text);
-  }
-
+async function first_run() {
+  await reload_theme();
+  await reload_grammar();
   run_update();
 }
 
 var Module = {
 preRun: [],
 postRun: [
-  run_main
+  first_run
 ],
 pushString: (function(str) {
   _begin_string();
@@ -178,13 +184,22 @@ totalDependencies: 0,
 monitorRunDependencies: (function(left) {})
 };
 </script>
-<script async type="text/javascript" src="syntax_highlight.js"></script>
 
-<select id="theme" onchange="reload_theme(); run_update();">
+<div id="head">
+<script async type="text/javascript" src="syntax_highlight.js"></script>
+</div>
+
+<button onclick="reload_script()">Reload</button>
+<select id="theme" onchange="(async function() { await reload_theme(); run_update(); })()">
   <option selected value="extensions/theme-monokai/themes/monokai-color-theme.json">Monokai</option>
   <option value="extensions/theme-kimbie-dark/themes/kimbie-dark-color-theme.json">Kimbie Dark</option>
   <option value="extensions/uloco.theme-bluloco-dark-3.1.1/themes/bluloco-dark-italic-color-theme.json">Bluloco</option>
   <option value="extensions/dracula-theme.theme-dracula-2.24.2/theme/dracula.json">Dracula</option>
+</select>
+<select id="language" onchange="(async function() { await reload_grammar(); run_update();})()">
+  <option selected value="extensions/cpp/syntaxes/c.tmLanguage.json">c</option>
+  <option value="extensions/cpp/syntaxes/cpp.tmLanguage.json">c++</option>
+  <option value="extensions/javascript/syntaxes/JavaScript.tmLanguage.json">js</option>
 </select>
 <hr/>
 <textarea id="source" rows="10" cols="80" oninput="run_update()">int main(int argc, char **argv) {

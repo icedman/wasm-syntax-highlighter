@@ -5,12 +5,13 @@ project(cpp_library)
 set(CPP_LIBRARY_TYPE "STATIC" CACHE STRING "Library type to build")
 set_property(CACHE CPP_LIBRARY_TYPE PROPERTY STRINGS STATIC SHARED)
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -s WASM=1 -s INITIAL_MEMORY=33554432 -s ALLOW_MEMORY_GROWTH=1 -s MODULARIZE=1")
+
 add_definitions(-DDISABLE_DEFAULT_THEME=1)
 add_definitions(-DDISABLE_DEFAULT_GRAMMAR=1)
 add_definitions(-DDISABLE_RESOURCE_CACHING=1)
 add_definitions(-DDISABLE_PLIST_GRAMMARS=1)
 add_definitions(-DDISABLE_ADD_GRAMMAR_THREADS=1)
-add_definitions(-Os -s WASM=1 -s ALLOW_MEMORY_GROWTH=1 -s MODULARIZE=1)
 
 add_library(cpp_lib ${CPP_LIBRARY_TYPE} lib.cpp
 	#./libs/tinyxml2/tinyxml2.cpp
