@@ -61,6 +61,7 @@ EXPORT int load_theme_buffer()
 
 EXPORT int load_language_buffer()
 {
+	// Textmate::load_language_data(NULL);
 	int id = Textmate::load_language_data(string_buffer);
 	Textmate::set_language(id);
 	return id;

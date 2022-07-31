@@ -4,3 +4,4 @@ cmake_install.cmake
 *.wasm
 *.js
 **/*.a
+build
