@@ -20,6 +20,11 @@
 <script>
 var css = {};
 
+function _style_color(s) {
+  // return `color: rgb(${s.r},${s.g},${s.b})`;
+  return `color: #${s.r.toString(16)}${s.g.toString(16)}${s.b.toString(16)}`;
+}
+
 function append_styled_line(styled, target) {
   var line = document.createElement('div');
 
@@ -29,7 +34,11 @@ function append_styled_line(styled, target) {
               .replace('<', '&lt;')
               .replace('>', '&gt;');
 
-    var style = `color: rgb(${s.r},${s.g},${s.b})`;
+    var style = _style_color(s);
+    if (s.italic) {
+      style += '; font-style: italic';
+    }
+
     span.setAttribute('style', style);
 
     line.appendChild(span);
