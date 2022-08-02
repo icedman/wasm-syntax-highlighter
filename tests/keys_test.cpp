@@ -36,21 +36,6 @@ int main(int argc, char **argv) {
       if (c == 'q') running = false;
     }
   }
-  // 
-  // int ch = -1;
-  // std::string keySequence;
-  // while (running) {
-  //   ch = readKey(keySequence);
-  //   if (ch == -1) continue;
-  //   if (ch == 27) break;
-  //   move(0,0);
-  //   clrtoeol();
-
-  //   char tmp[32];
-  //   sprintf(tmp, "%d %c %s", ch, ch, keySequence.c_str());
-  //   addstr(tmp);
-  //   refresh();
-  // }
   
   while (running) {
     if (kbhit(500) != 0) {

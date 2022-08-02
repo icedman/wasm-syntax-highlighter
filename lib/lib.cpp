@@ -15,6 +15,8 @@
 #define EXPORT                                                                 \
   extern "C" __attribute__((visibility("default"))) __attribute__((used))
 
+block_list blocks;
+
 EXPORT void initialize()
 {
 	// Textmate::load_theme_data(THEME_MONOKAI);
