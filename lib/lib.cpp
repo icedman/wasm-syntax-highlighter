@@ -15,7 +15,7 @@
 #define EXPORT                                                                 \
   extern "C" __attribute__((visibility("default"))) __attribute__((used))
 
-block_list blocks;
+// block_list blocks;
 
 EXPORT void initialize()
 {

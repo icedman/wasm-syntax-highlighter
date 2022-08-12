@@ -922,30 +922,6 @@ libs/tm-parser/textmate/theme/theme.cpp.s:
 	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/theme/theme.cpp.s
 .PHONY : libs/tm-parser/textmate/theme/theme.cpp.s
 
-libs/tm-parser/textmate/theme/util.o: libs/tm-parser/textmate/theme/util.cpp.o
-.PHONY : libs/tm-parser/textmate/theme/util.o
-
-# target to build an object file
-libs/tm-parser/textmate/theme/util.cpp.o:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/theme/util.cpp.o
-.PHONY : libs/tm-parser/textmate/theme/util.cpp.o
-
-libs/tm-parser/textmate/theme/util.i: libs/tm-parser/textmate/theme/util.cpp.i
-.PHONY : libs/tm-parser/textmate/theme/util.i
-
-# target to preprocess a source file
-libs/tm-parser/textmate/theme/util.cpp.i:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/theme/util.cpp.i
-.PHONY : libs/tm-parser/textmate/theme/util.cpp.i
-
-libs/tm-parser/textmate/theme/util.s: libs/tm-parser/textmate/theme/util.cpp.s
-.PHONY : libs/tm-parser/textmate/theme/util.s
-
-# target to generate assembly for a file
-libs/tm-parser/textmate/theme/util.cpp.s:
-	cd /home/iceman/Developer/Projects/emscripten/wasm-syntax-highlighter && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cpp_lib.dir/build.make lib/CMakeFiles/cpp_lib.dir/libs/tm-parser/textmate/theme/util.cpp.s
-.PHONY : libs/tm-parser/textmate/theme/util.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1054,9 +1030,6 @@ help:
 	@echo "... libs/tm-parser/textmate/theme/theme.o"
 	@echo "... libs/tm-parser/textmate/theme/theme.i"
 	@echo "... libs/tm-parser/textmate/theme/theme.s"
-	@echo "... libs/tm-parser/textmate/theme/util.o"
-	@echo "... libs/tm-parser/textmate/theme/util.i"
-	@echo "... libs/tm-parser/textmate/theme/util.s"
 .PHONY : help
 
 
